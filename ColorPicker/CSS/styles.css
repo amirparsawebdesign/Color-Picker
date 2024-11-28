@@ -1,0 +1,115 @@
+@font-face{
+      font-family: Martel;
+      src: url(../Fonts/Martel-Regular.ttf)
+}
+*, *::before, *::after{
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      box-sizing: border-box;
+}
+:root{
+      --main-font-family: Martel;
+      --body-background-color: #1F1F1F;
+}
+html{
+      text-decoration: none;
+      scroll-behavior: smooth;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      font-family: var(--main-font-family);
+}
+body{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--main-font-family);
+      background: var(--body-background-color);
+      gap: 100px;
+}
+
+.colors{
+      position: relative;
+      padding: 30px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #28292B;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+}
+
+.colors span{
+      position: relative;
+      width: 50px;
+      height: 20px;
+      background: #1F1F1F;
+      margin: 20px;
+      cursor: pointer;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+}
+.colors span::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--clr);
+      border-radius: 50%;
+      scale: 0.8;
+      opacity: 0.25;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+}
+
+.colors span:hover::before{
+      left: 10px;
+      opacity: 1;
+      scale: 1;
+}
+
+.colors span.active::before{
+      left: 30px;
+      opacity: 1;
+      scale: 1.25;
+      box-shadow: 0 0 10px var(--clr), 0 0 20px var(--clr), 0 0 50px var(--clr);
+}
+
+.container{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background: #28292B;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+}
+
